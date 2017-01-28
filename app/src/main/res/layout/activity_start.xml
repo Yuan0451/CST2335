@@ -20,8 +20,10 @@
         android:text="@string/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/button1"
         style="@android:style/Widget.Button"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>
