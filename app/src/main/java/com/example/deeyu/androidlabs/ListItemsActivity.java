@@ -89,8 +89,6 @@ public class ListItemsActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     @Override

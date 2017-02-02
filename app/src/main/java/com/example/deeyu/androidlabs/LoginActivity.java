@@ -30,11 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         String name = sharedpreferences.getString(Name, "email@domain.com");
-        if(!name.trim().equals("")){
             ed1.setText(name);
-        }else{
-            ed1.setText("email@domain.com");
-        }
 
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
