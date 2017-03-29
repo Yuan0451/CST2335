@@ -25,5 +25,23 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:text="@string/ButtonSC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="49dp"
+        android:id="@+id/buttonSC" />
+
+    <Button
+        android:text="@string/ButtonWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_alignEnd="@+id/button1"
+        android:layout_marginTop="45dp"
+        android:id="@+id/buttonWeather" />
+
 
 </RelativeLayout>

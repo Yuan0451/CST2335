@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                 editor.putString(Name, name);
                 editor.commit();
                 startActivity(intent);
+//                finish();
             }
         });
     }

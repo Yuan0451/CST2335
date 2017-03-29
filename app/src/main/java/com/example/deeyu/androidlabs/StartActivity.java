@@ -14,6 +14,8 @@ public class StartActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "StartActivity";
     Button button1;
+    Button buttonSC;
+    Button buttonWeather;
 
     @Override
     protected void onCreate(Bundle savedInstance) {
@@ -28,12 +30,33 @@ public class StartActivity extends AppCompatActivity {
                 startActivityForResult(intent, 5);
             }
         });
+
+        buttonSC = (Button) findViewById(R.id.buttonSC);
+        buttonSC.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View v) {
+                Intent intent = new Intent (StartActivity.this, ChartWindow.class);
+                startActivityForResult(intent, 6);
+            }
+        });
+
+        buttonWeather = (Button) findViewById(R.id.buttonWeather);
+        buttonWeather.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
+                startActivityForResult(intent, 7);
+            }
+        });
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if( requestCode == 5 ) {
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
         }
+
+        if (requestCode == 6 ) {
+            Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+        }
+
         if( resultCode == Activity.RESULT_OK){
             String messagePassed = data.getStringExtra("Response");
             int duration = Toast.LENGTH_SHORT;
@@ -41,6 +64,8 @@ public class StartActivity extends AppCompatActivity {
             toast.show();
         }
     }
+
+
 
     @Override
     protected void onResume(){
